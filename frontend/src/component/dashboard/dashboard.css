@@ -1,0 +1,370 @@
+.idk {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.idk a {
+  position: relative;
+}
+.idk a svg {
+  margin: 1.5em 1em;
+  font-size: 1.5em;
+  opacity: 0.5;
+  padding: 10px 0 10px 10px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.idk a.active {
+  transition-duration: 0.3s;
+  width: 100%;
+  position: relative;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  background-color: #fff;
+}
+.idk a.active.select-user {
+  color: var(--button);
+}
+.idk a.active.select-bundle {
+  color: var(--button);
+}
+.idk a.active.select-server {
+  color: green;
+}
+.idk a .title-s {
+  display: none;
+  font-size: 1em !important;
+  border-bottom: none;
+  text-decoration: none !important;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+}
+
+@media (max-width: 900px) {
+  .idk {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: -90px;
+    flex-direction: row;
+    position: absolute;
+  }
+  .idk a {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    border-radius: 32% !important;
+  }
+  .idk a svg {
+    margin: 1em 0.5em;
+    font-size: 1.2em;
+    padding: 10px 0 10px 10px;
+  }
+}
+.dashboard .users {
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 32px;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  width: 80vw;
+}
+.dashboard .users .title {
+  font-style: italic;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 2em;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+.dashboard .users .title svg {
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.dashboard .users .con-users {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dashboard .users .con-users img {
+  border-radius: 20px;
+  cursor: pointer;
+  border-radius: 23px;
+  aspect-ratio: 4/3;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 9em;
+}
+.dashboard .users .con-users div.container-user {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin: 1em;
+  padding: 2em;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.3s;
+}
+.dashboard .users .con-users div.container-user.admin {
+  background-color: #d4d1fa;
+}
+.dashboard .users .con-users div.container-user .title-u {
+  text-transform: capitalize;
+}
+.dashboard .users .con-users div.container-user .get {
+  color: #0b5ed7;
+  font-size: 1.3em;
+}
+.dashboard .title-u {
+  text-transform: capitalize;
+}
+.dashboard .get {
+  color: #0b5ed7;
+  font-size: 1.3em;
+}
+.dashboard .info,
+.dashboard .bundle,
+.dashboard .trans {
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 20px;
+  position: relative;
+  margin: 2em 0;
+  width: 100%;
+}
+.dashboard .info h2,
+.dashboard .bundle h2,
+.dashboard .trans h2 {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: -20px;
+  background-color: white;
+}
+.dashboard .con-ti {
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 20px;
+  margin: 0.5em;
+}
+
+@media (max-width: 900px) {
+  .dashboard div.container-user {
+    width: 100% !important;
+  }
+}
+.dashboard .c-bundle {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #fff;
+  padding: 32px;
+  border-radius: 32px;
+  margin: 0 auto;
+}
+.dashboard .c-bundle .err {
+  text-align: center;
+  color: red;
+}
+.dashboard .c-bundle .title {
+  font-style: italic;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 2em;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+.dashboard .c-bundle .title svg {
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.dashboard .c-bundle .title svg:hover {
+  transition-duration: 0.3s;
+  padding: 1.1em;
+}
+.dashboard .c-bundle .bundle {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.dashboard .c-bundle .bundle .con-bundle {
+  margin: 1em 0.5em;
+  background-color: var(--app-container);
+  padding: 1em;
+  border-radius: 32px;
+  transition-duration: 0.3s;
+  width: 30%;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dashboard .c-bundle .bundle .con-bundle:hover {
+  transition-duration: 0.3s;
+  background-color: #d4d1fa;
+}
+.dashboard .c-bundle .bundle .con-bundle .info {
+  width: 100%;
+}
+.dashboard .c-bundle .bundle .con-bundle img {
+  width: 10em;
+}
+.dashboard .c-bundle .bundle .con-bundle .modal-body div {
+  width: 100%;
+}
+.dashboard .c-bundle .bundle .con-bundle .name .s,
+.dashboard .c-bundle .bundle .con-bundle .date .s,
+.dashboard .c-bundle .bundle .con-bundle .price .s,
+.dashboard .c-bundle .bundle .con-bundle .det .s {
+  text-transform: capitalize;
+  margin: 0 5px;
+}
+.dashboard .c-bundle .bundle .con-bundle .name .ti,
+.dashboard .c-bundle .bundle .con-bundle .date .ti,
+.dashboard .c-bundle .bundle .con-bundle .price .ti,
+.dashboard .c-bundle .bundle .con-bundle .det .ti {
+  color: #7891eb;
+  font-size: 1em;
+}
+.dashboard .c-bundle .bundle .con-bundle .det {
+  max-width: 150px;
+}
+.dashboard .c-bundle .bundle .con-bundle .user-count {
+  width: 100%;
+}
+.dashboard .c-bundle .bundle .con-bundle .user-count .ti {
+  color: #7891eb;
+  font-size: 1.5em;
+}
+.dashboard .c-bundle .bundle .con-bundle input {
+  margin: 0 10px;
+}
+
+@media (max-width: 900px) {
+  .c-bundle .bundle .con-bundle {
+    margin: 15px 5px;
+    background-color: var(--app-container);
+    padding: 1em;
+    border-radius: 32px;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    transition-duration: 0.3s;
+    height: -moz-fit-content;
+    height: fit-content;
+    cursor: pointer;
+  }
+  .c-bundle .bundle .con-bundle:hover {
+    transition-duration: 0.3s;
+  }
+}
+.modal.show .modal-dialog {
+  position: relative;
+  top: 100px;
+}
+
+.modal-body div {
+  width: 100%;
+}
+
+.dis {
+  pointer-events: none;
+}
+
+.done,
+.cancel {
+  transition-duration: 3s;
+}
+.done.true,
+.cancel.true {
+  transition-duration: 3s;
+  display: none;
+}
+
+.clear {
+  margin-top: 2em;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  text-transform: capitalize;
+}
+
+:root {
+  --app-container: #f3f6fd;
+  --main-color: #1f1c2e;
+  --secondary-color: #4a4a4a;
+  --link-color: #1f1c2e;
+  --link-color-hover: #c3cff4;
+  --link-color-active: #fff;
+  --link-color-active-bg: #1f1c2e;
+  --projects-section: #fff;
+  --message-box-hover: #fafcff;
+  --message-box-border: #e9ebf0;
+  --more-list-bg: #fff;
+  --more-list-bg-hover: #f6fbff;
+  --more-list-shadow: rgba(209, 209, 209, 0.4);
+  --button-bg: #1f1c24;
+  --search-area-bg: #fff;
+  --star: #1ff1c2e;
+  --message-btn: #fff;
+}
+
+.dark:root {
+  --app-container: #1f1d2b;
+  --app-container: #111827;
+  --main-color: #fff;
+  --secondary-color: rgba(255, 255, 255, 0.8);
+  --projects-section: #1f2937;
+  --link-color: rgba(255, 255, 255, 0.8);
+  --link-color-hover: rgba(195, 207, 244, 0.1);
+  --link-color-active-bg: rgba(195, 207, 244, 0.2);
+  --button-bg: #1f2937;
+  --search-area-bg: #1f2937;
+  --message-box-hover: #243244;
+  --message-box-border: rgba(255, 255, 255, 0.1);
+  --star: #ffd92c;
+  --light-font: rgba(255, 255, 255, 0.8);
+  --more-list-bg: #2f3142;
+  --more-list-bg-hover: rgba(195, 207, 244, 0.1);
+  --more-list-shadow: rgba(195, 207, 244, 0.1);
+  --message-btn: rgba(195, 207, 244, 0.1);
+}
+
+.dashboard {
+  position: relative;
+  top: 10em;
+}
+.dashboard .con > div {
+  top: 50%;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    top: 13em;
+  }
+}
+.dollar-co {
+  position: absolute;
+  left: 50%;
+}
+
+.modal.fade.show {
+  z-index: 2345678543234567;
+}/*# sourceMappingURL=dashboard.css.map */

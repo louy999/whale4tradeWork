@@ -1,0 +1,24 @@
+.modal-body {
+  div {
+    width: 100%;
+  }
+}
+
+.dis {
+  pointer-events: none;
+}
+.done,
+.cancel {
+  transition-duration: 3s;
+  &.true {
+    transition-duration: 3s;
+    display: none;
+  }
+}
+.clear {
+  margin-top: 2em;
+  width: fit-content;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  text-transform: capitalize;
+}

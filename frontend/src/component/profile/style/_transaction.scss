@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;1,700&display=swap");
+@import "../../../style/color";
+.profile {
+  > div {
+    &.transaction {
+      font-family: "Source Sans Pro", sans-serif;
+      min-height: 50vh;
+      max-height: fit-content;
+      .title {
+        font-style: italic;
+        width: 100%;
+        text-transform: capitalize;
+        font-size: 2em;
+        text-align: center;
+
+        border-bottom: 2px solid #ddd;
+      }
+      .list {
+        min-height: 70%;
+        height: fit-content;
+        > div {
+          display: flex;
+          flex-wrap: wrap;
+          &.with,
+          &.dep,
+          &.con,
+          &.sub-b,
+          &.sub-p {
+            > div {
+              padding: 0 5px;
+              &.prog {
+                font-size: 18px;
+                font-weight: bold;
+              }
+            }
+          }
+          &.with {
+            background-color: #3e98c7;
+            color: white;
+            margin: 5px 0;
+            border-radius: 15px;
+            &.cancel {
+              background-color: #ff1361;
+            }
+            &.done {
+              background-color: #3ff467;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .profile {
+    > div {
+      &.transaction {
+        .title {
+        }
+        .list {
+          > div {
+            &.with,
+            &.dep,
+            &.con,
+            &.sub-b,
+            &.sub-p {
+              > div {
+                &.prog {
+                  font-size: 1em;
+                }
+              }
+            }
+            &.with {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .profile {
+    > div {
+      &.transaction {
+        .title {
+        }
+        .list {
+          > div {
+            &.with,
+            &.dep,
+            &.con,
+            &.sub-b,
+            &.sub-p {
+              > div {
+                &.prog {
+                  font-size: 0.8em;
+                }
+              }
+            }
+            &.with {
+              .price,
+              .time {
+                font-size: 0.6em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.Register {
+  .conf {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5em;
+  }
+  .login-box {
+    width: 40vw;
+    margin: 0;
+    padding: 1em 2em;
+    .user-box {
+      input {
+        width: 100%;
+        padding: 0.6em 0;
+        font-size: 0.8em;
+        color: #fff;
+        margin-bottom: 0.9em;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+      }
+    }
+    .input-number {
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+      font-size: 0.6em;
+    }
+    form {
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 0.5em 1em;
+        color: #03e9f4;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 0.9em;
+        letter-spacing: 4px;
+        &:hover {
+          color: white !important;
+        }
+        span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #03e9f4);
+          animation: btn-anim4 1s linear infinite;
+          animation-delay: 0.75s;
+        }
+      }
+    }
+    .label-check {
+      color: white;
+      margin: 0 0.6em;
+      display: inline;
+      a {
+        color: #03e9f4;
+
+        letter-spacing: 1px !important;
+        margin: 0 !important;
+        padding: 0 0.5em !important;
+        display: inline-flex;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .Register {
+    .login-box {
+      padding: 0.5em 1em;
+      width: 60vw;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .Register {
+    .login-box {
+      padding: 0.5em 1em;
+      width: 90vw;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .Register {
+    .login-box {
+      transform: translate(-50%, -41%) !important;
+      height: 22em !important;
+      h2 {
+        font-size: 1em;
+      }
+    }
+    .user-box {
+      input {
+        padding: 0.2em 0 !important;
+        font-size: 0.7em;
+      }
+      label {
+        font-size: 0.5em !important;
+      }
+    }
+    .id {
+      font-size: 0.3em;
+    }
+    .conf {
+      margin: 0 !important;
+      input {
+        font-size: 0.5em;
+        padding: 0.1em 0.3em;
+        margin: 0 !important;
+      }
+    }
+    .label-check {
+      font-size: 0.2em;
+    }
+    a {
+      padding: 0.2em 0.4em !important;
+      font-size: 0.4em !important;
+    }
+  }
+}

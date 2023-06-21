@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@400;600&display=swap");
+* {
+  font-family: "Noto Serif Lao", serif;
+}
+
+nav {
+  overflow: hidden;
+  position: absolute !important;
+  z-index: 1246733463467;
+  top: 0;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 15px 5px 20px;
+  transition-duration: 0.3s;
+  &.bg-light {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.12);
+    .container-fluid {
+      .navbar-toggler {
+        border: none;
+        transform: rotateZ(180deg);
+        font-size: 29px;
+        box-shadow: none;
+        color: white;
+        margin-left: 5px;
+      }
+      .navbar-brand {
+        color: #333 !important;
+        font-size: 1em !important;
+      }
+      .cc {
+        ul {
+          flex-direction: row;
+
+          li {
+            a {
+              color: #333;
+              opacity: 0.5;
+              font-size: 1em;
+              &:hover {
+                opacity: 1;
+                font-size: 1.3em;
+              }
+              &.active {
+                font-size: 1.3em;
+                background-color: #333 !important;
+                color: white !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .container-fluid {
+    .navbar-brand {
+      font-family: "Climate Crisis", cursive;
+      color: #333;
+    }
+    .navbar-toggler {
+      border: none;
+      transform: rotateZ(180deg);
+      font-size: 29px;
+      box-shadow: none;
+    }
+
+    .cc {
+      transition: none;
+      &.show {
+        ul {
+          border-radius: 20px;
+          flex-direction: row;
+
+          li {
+            display: flex;
+            justify-content: center;
+            margin: 15px;
+            a {
+              font-size: 18px;
+              &.active {
+                background-color: #fff;
+                font-size: 25px;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+      ul {
+        flex-direction: row;
+
+        li {
+          margin: 0 15px;
+          a {
+            font-size: 18px;
+            align-items: center;
+            display: flex;
+            &.active {
+              font-size: 25px;
+              background-color: #fff;
+              color: #333;
+              transition-duration: 0.4s;
+            }
+            span {
+              background-color: #fff;
+              display: none;
+              margin: 0 10px;
+              font-size: 15px;
+              height: fit-content;
+              transition-duration: 0.3s;
+            }
+            &:hover .login,
+            &:hover .logout {
+              transition-duration: 0.3s;
+              // display: block;
+            }
+            svg {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  nav {
+    box-shadow: none;
+    width: 100%;
+    margin: 0 !important;
+    transform: translateX(0);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background-color: #fff;
+    &.bg-light {
+      margin: 25px auto;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      .navbar-toggler {
+        color: #333 !important;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  nav {
+    .navbar-brand {
+      text-align: center;
+      width: 100%;
+    }
+    .cc {
+      width: 100%;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        li {
+          margin: 0;
+          a {
+            font-size: 0.8em !important;
+          }
+        }
+      }
+    }
+  }
+}

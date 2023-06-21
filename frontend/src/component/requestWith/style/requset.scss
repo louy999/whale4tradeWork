@@ -1,0 +1,56 @@
+.request {
+  position: relative;
+  top: 100px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 2em 1em;
+  border-radius: 23px;
+  overflow: scroll;
+  .hide {
+    display: none;
+  }
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 1em;
+    .req-title {
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+  }
+  .err {
+    color: red;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  table {
+    text-align: center;
+    margin: 1em auto 0;
+    tbody {
+      tr {
+        &.pending {
+          background-color: #eae129;
+        }
+        &.cancel {
+          background-color: #ff1361;
+        }
+        &.done {
+          background-color: #3ff467;
+        }
+      }
+    }
+  }
+}
+.circle-load {
+  fill: black !important;
+  height: 20%;
+  width: 20%;
+  margin: 16% auto;
+}
+.dis {
+  pointer-events: none;
+}

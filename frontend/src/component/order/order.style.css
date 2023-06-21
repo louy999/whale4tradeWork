@@ -1,0 +1,114 @@
+.container-order {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.container-order .err {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+.container-order .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5678;
+}
+.container-order > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-wrap: wrap;
+}
+.container-order > div img {
+  width: 40%;
+  border-radius: 32px !important;
+}
+.container-order > div .con {
+  margin: 0 1em;
+}
+.container-order > div .con .price .title,
+.container-order > div .con .win .title,
+.container-order > div .con .name .title,
+.container-order > div .con .category .title,
+.container-order > div .con .description .title {
+  text-transform: capitalize;
+  margin: 0 3px;
+  font-size: 2em;
+  color: #30261d;
+}
+.container-order > div .con .price .co,
+.container-order > div .con .win .co,
+.container-order > div .con .name .co,
+.container-order > div .con .category .co,
+.container-order > div .con .description .co {
+  font-size: 2.3em;
+  font-weight: bold;
+  color: #0b5ed7;
+}
+.container-order > div .con .price .price-vip,
+.container-order > div .con .win .price-vip,
+.container-order > div .con .name .price-vip,
+.container-order > div .con .category .price-vip,
+.container-order > div .con .description .price-vip {
+  width: 30%;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+.container-order > div .con .price input,
+.container-order > div .con .win input,
+.container-order > div .con .name input,
+.container-order > div .con .category input,
+.container-order > div .con .description input {
+  background-color: transparent;
+  border: none;
+}
+.container-order > div .con .description .di {
+  font-weight: bold;
+  font-size: 2.3em;
+  color: #3e98c7;
+}
+.container-order input {
+  width: 80%;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .container-order > div img {
+    width: 80%;
+    height: 60% !important;
+    border-radius: 20px;
+  }
+  .container-order > div .con .price,
+  .container-order > div .con .win,
+  .container-order > div .con .name,
+  .container-order > div .con .category,
+  .container-order > div .con .description {
+    width: 100%;
+  }
+  .container-order > div .con .price .title,
+  .container-order > div .con .win .title,
+  .container-order > div .con .name .title,
+  .container-order > div .con .category .title,
+  .container-order > div .con .description .title {
+    font-size: 1em;
+  }
+  .container-order > div .con .price .co,
+  .container-order > div .con .win .co,
+  .container-order > div .con .name .co,
+  .container-order > div .con .category .co,
+  .container-order > div .con .description .co {
+    font-size: 1.2em;
+  }
+}/*# sourceMappingURL=order.style.css.map */
